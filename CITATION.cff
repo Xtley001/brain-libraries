@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: ""
+    alias: "Xtley001"
+title: "Brain Alpha Pipeline"
+version: 0.1.0
+date-released: 2026-10-09
+url: "https://github.com/Xtley001/brain-alpha-pipeline"
+repository-code: "https://github.com/Xtley001/brain-alpha-pipeline"
+keywords:
+  - WorldQuant BRAIN
+  - alpha generation
+  - quantitative finance
+  - decorrelation
+  - factor investing
+  - financial machine learning

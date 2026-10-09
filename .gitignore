@@ -8,6 +8,7 @@ build/
 dist/
 *.egg-info/
 .eggs/
+brain_*-*/
 
 # Virtual environments
 venv/

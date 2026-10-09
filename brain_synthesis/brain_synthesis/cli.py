@@ -16,16 +16,6 @@ import os
 import sys
 from typing import List, Optional
 
-# Prioritize installed editable packages over workspace root directories
-_curr_file = os.path.abspath(__file__)
-_brain_lib_dir = os.path.abspath(os.path.join(os.path.dirname(_curr_file), "..", ".."))
-_workspace_root = os.path.dirname(_brain_lib_dir)
-sys.path = [p for p in sys.path if os.path.abspath(p) not in (_brain_lib_dir, _workspace_root)]
-_editables = [f for f in sys.meta_path if "Editable" in getattr(f, "__name__", "")]
-for f in _editables:
-    sys.meta_path.remove(f)
-    sys.meta_path.insert(0, f)
-
 log = logging.getLogger("brain_cli")
 
 

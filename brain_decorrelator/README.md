@@ -2,7 +2,7 @@
 
 Strategy-agnostic alpha decorrelation engine with plugin-based orthogonalization axes.
 
-[![CI](https://img.shields.io/github/actions/workflow/status/Xtley001/brain-alpha-pipeline/libraries-ci.yml?branch=main)](https://github.com/Xtley001/brain-alpha-pipeline/actions)
+[![CI](https://img.shields.io/github/actions/workflow/status/Xtley001/brain-alpha-pipeline/ci.yml?branch=main)](https://github.com/Xtley001/brain-alpha-pipeline/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/brain-decorrelator)](https://pypi.org/project/brain-decorrelator/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)

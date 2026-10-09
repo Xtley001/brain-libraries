@@ -2,7 +2,7 @@
 
 A suite of 7 pip-installable Python libraries for WorldQuant BRAIN alpha discovery, orthogonal decorrelation, and tri-factor meta-synthesis.
 
-[![Libraries CI](https://img.shields.io/github/actions/workflow/status/Xtley001/brain-alpha-pipeline/libraries-ci.yml?branch=main)](https://github.com/Xtley001/brain-alpha-pipeline/actions)
+[![Libraries CI](https://img.shields.io/github/actions/workflow/status/Xtley001/brain-alpha-pipeline/ci.yml?branch=main)](https://github.com/Xtley001/brain-alpha-pipeline/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![PyPI](https://img.shields.io/pypi/v/brain-synthesis)](https://pypi.org/project/brain-synthesis/)
@@ -34,6 +34,14 @@ brain decorrelate "rank(implied_volatility_call_30)" --base-sharpe 1.55
 # Inspect storage health and cache counts
 brain store
 ```
+
+## Who Is This For
+
+If you are developing a WorldQuant BRAIN alpha generation and research pipeline in Python and need:
+- **High-Value Alpha Discovery**: Systematic signal mining across options implied volatility, analyst earnings revisions, and systematic risk premia.
+- **Correlation Gate Clearance**: Break platform correlation gates ($|\rho| < 0.70$) without sacrificing Sharpe using 6-axis orthogonal decorrelation.
+- **Tri-Factor Meta-Synthesis**: Cross-domain signal fusion combining options (50%), sentiment (30%), and risk models (20%) into golden apex alphas yielding 1,500+ platform points.
+- **Robust Persistence & Dedup**: Dual-mode PostgreSQL connection pooling with zero-dependency offline fallback and AST algebraic deduplication.
 
 ## Package Index
 
