@@ -8,7 +8,7 @@ Clone the repository and install all packages in editable mode:
 
 ```bash
 git clone https://github.com/Xtley001/brain-libraries.git
-cd brain-alpha-pipeline/brain_libraries
+cd brain-libraries
 python -m venv venv
 venv\Scripts\activate
 pip install -e ./brain_core -e ./brain_store -e ./brain_decorrelator -e ./brain_options -e ./brain_sentiment -e ./brain_risk_model -e ./brain_synthesis
@@ -17,7 +17,7 @@ pip install -e ./brain_core -e ./brain_store -e ./brain_decorrelator -e ./brain_
 Run the entire verification suite:
 
 ```bash
-python test_all.py
+python scripts/test_all.py
 ```
 
 ## Pull Request Process
@@ -30,7 +30,7 @@ python test_all.py
 3. Add unit tests under the corresponding `tests/` directory for any new logic or bug fix.
 4. Verify that all 86+ test cases pass:
    ```bash
-   python test_all.py
+   python scripts/test_all.py
    ```
 5. Ensure type annotations and docstrings are complete.
 6. Commit using conventional commit format:

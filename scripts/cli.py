@@ -4,8 +4,8 @@ Brain Alpha Pipeline — Unified Cross-Domain CLI entrypoint.
 import os
 import sys
 
-# Ensure local packages are on sys.path when running from repository root without pip install -e
-_base_dir = os.path.dirname(os.path.abspath(__file__))
+# Ensure local packages are on sys.path when running from repository scripts directory
+_base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 for _lib in (
     "brain_core",
     "brain_store",

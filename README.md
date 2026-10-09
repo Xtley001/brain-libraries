@@ -82,7 +82,7 @@ graph TD
 
 ```bash
 # Run test suite across all 7 libraries (86 tests)
-python test_all.py
+python scripts/test_all.py
 ```
 
 ## Security

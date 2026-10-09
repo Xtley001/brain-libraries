@@ -3,25 +3,56 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Distribution / packaging
+# Distribution & packaging
 build/
 dist/
 *.egg-info/
 .eggs/
 brain_*-*/
+*.tar.gz
+*.whl
+*.zip
 
 # Virtual environments
 venv/
 env/
 .venv/
 
-# Testing & coverage
+# Testing, type checking & coverage
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .coverage
 htmlcov/
 
+# Local databases & state
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs & scratch directories
+*.log
+logs/
+scratch/
+tmp/
+temp/
+
+# Scratch & temporary scripts (root-level only)
+/test.py
+/test_*.py
+/temp.py
+/temp_*.py
+/scratch.py
+/scratch_*.py
+
+# Internal audit & roadmap worklogs
+/*AUDIT*.md
+/*ROADMAP*.md
+/AUDIT_AND_ROADMAP.md
+
 # Environment secrets
 .env
+*.env
 *.local
 
 # IDE & editors
@@ -30,11 +61,10 @@ htmlcov/
 *.swp
 *.swo
 
-# Articles & Marketing (Draft Medium publications)
+# Articles & Marketing (Draft publications)
 articles/
 docs/articles/
 
 # OS files
 .DS_Store
 Thumbs.db
-

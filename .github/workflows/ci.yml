@@ -44,4 +44,4 @@ jobs:
 
       - name: Execute 7 Libraries Test Suite
         run: |
-          python test_all.py
+          python scripts/test_all.py

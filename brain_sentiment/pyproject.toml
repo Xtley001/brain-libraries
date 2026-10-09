@@ -56,4 +56,4 @@ where = ["."]
 include = ["brain_sentiment*"]
 
 [tool.setuptools.package-data]
-brain_sentiment = ["py.typed", "data/*.json", "*.json"]
+brain_sentiment = ["py.typed", "data/*.json"]

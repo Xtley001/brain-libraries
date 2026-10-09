@@ -57,4 +57,4 @@ where = ["."]
 include = ["brain_risk_model*"]
 
 [tool.setuptools.package-data]
-brain_risk_model = ["py.typed", "data/*.json", "*.json"]
+brain_risk_model = ["py.typed", "data/*.json"]

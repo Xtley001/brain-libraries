@@ -32,8 +32,9 @@ graph TD
 
 ```
 brain_libraries/
-├── cli.py                     # Unified CLI: generate, decorrelate, apex, status
-├── test_all.py                # Integrated test runner for all 7 packages
+├── scripts/
+│   ├── cli.py                 # Unified CLI helper: generate, decorrelate, status
+│   └── test_all.py            # Integrated test runner for all 7 packages
 ├── brain_core/                # Universal contracts & AST deduplication
 │   ├── brain_core/
 │   │   ├── types.py           # AlphaCandidate, SimSettings, SimMetrics
