@@ -1,0 +1,72 @@
+name: Publish to PyPI
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Build & Publish All 7 Brain Libraries
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install build tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
+
+      - name: Build distributions in dependency order
+        run: |
+          PACKAGES=(
+            "brain_core"
+            "brain_store"
+            "brain_decorrelator"
+            "brain_options"
+            "brain_sentiment"
+            "brain_risk_model"
+            "brain_synthesis"
+          )
+          for pkg in "${PACKAGES[@]}"; do
+            echo "::group::Building $pkg"
+            cd $pkg
+            python -m build
+            twine check dist/*
+            cd ..
+            echo "::endgroup::"
+          done
+
+      - name: Publish to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          PACKAGES=(
+            "brain_core"
+            "brain_store"
+            "brain_decorrelator"
+            "brain_options"
+            "brain_sentiment"
+            "brain_risk_model"
+            "brain_synthesis"
+          )
+          for pkg in "${PACKAGES[@]}"; do
+            echo "::group::Publishing $pkg"
+            cd $pkg
+            twine upload --skip-existing dist/*
+            cd ..
+            echo "::endgroup::"
+          done

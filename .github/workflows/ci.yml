@@ -1,0 +1,47 @@
+name: Brain Libraries CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: brain-libraries-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Test on Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies & packages in editable mode
+        run: |
+          python -m pip install --upgrade pip
+          pip install wheel pytest psycopg-pool
+          pip install -e brain_core
+          pip install -e brain_store
+          pip install -e brain_decorrelator
+          pip install -e brain_options
+          pip install -e brain_sentiment
+          pip install -e brain_risk_model
+          pip install -e brain_synthesis
+
+      - name: Execute 7 Libraries Test Suite
+        run: |
+          python test_all.py

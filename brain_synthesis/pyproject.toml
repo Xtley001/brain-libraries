@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brain-synthesis"
+version = "0.1.0"
+description = "Tri-factor apex synthesis engine fusing options, sentiment, and risk-model signals for WorldQuant BRAIN."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "Xtley001" }]
+keywords = [
+    "worldquant",
+    "brain",
+    "alpha",
+    "quantitative-finance",
+    "meta-alpha",
+    "tri-factor",
+    "synthesis",
+    "signal-fusion",
+    "algorithmic-trading",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "brain-core>=0.1.0",
+    "brain-options>=0.1.0",
+    "brain-sentiment>=0.1.0",
+    "brain-risk-model>=0.1.0",
+    "brain-store>=0.1.0",
+    "brain-decorrelator>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "black", "flake8", "mypy"]
+
+[project.scripts]
+brain = "brain_synthesis.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Xtley001/brain-alpha-pipeline"
+Repository = "https://github.com/Xtley001/brain-alpha-pipeline"
+Documentation = "https://github.com/Xtley001/brain-alpha-pipeline/tree/main/brain_libraries"
+"Bug Tracker" = "https://github.com/Xtley001/brain-alpha-pipeline/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["brain_synthesis*"]
+
+[tool.setuptools.package-data]
+brain_synthesis = ["py.typed"]

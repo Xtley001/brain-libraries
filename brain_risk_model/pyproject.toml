@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brain-risk-model"
+version = "0.1.0"
+description = "Systematic factor premia, Betting-Against-Beta, and risk-model alpha generation engine for WorldQuant BRAIN."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "Xtley001" }]
+keywords = [
+    "worldquant",
+    "brain",
+    "alpha",
+    "quantitative-finance",
+    "risk-model",
+    "betting-against-beta",
+    "factor-premia",
+    "systematic-trading",
+    "low-volatility",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "brain-core>=0.1.0",
+    "brain-store>=0.1.0",
+    "brain-decorrelator>=0.1.0",
+    "wqb>=0.2.5",
+    "requests>=2.31",
+    "numpy>=1.26",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "black", "flake8", "mypy"]
+
+[project.urls]
+Homepage = "https://github.com/Xtley001/brain-alpha-pipeline"
+Repository = "https://github.com/Xtley001/brain-alpha-pipeline"
+Documentation = "https://github.com/Xtley001/brain-alpha-pipeline/tree/main/brain_libraries"
+"Bug Tracker" = "https://github.com/Xtley001/brain-alpha-pipeline/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["brain_risk_model*"]
+
+[tool.setuptools.package-data]
+brain_risk_model = ["py.typed", "data/*.json", "*.json"]

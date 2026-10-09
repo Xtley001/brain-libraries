@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brain-store"
+version = "0.1.0"
+description = "Dual-mode persistence layer (PostgreSQL + file-backed) and RL state store for Brain Alpha pipelines."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "Xtley001" }]
+keywords = [
+    "worldquant",
+    "brain",
+    "alpha",
+    "quantitative-finance",
+    "postgresql",
+    "state-persistence",
+    "reinforcement-learning",
+    "storage",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Database",
+]
+dependencies = [
+    "brain-core>=0.1.0",
+    "psycopg[binary]>=3.1",
+    "psycopg_pool>=3.2",
+    "alembic>=1.13",
+    "numpy>=1.26",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "black", "flake8", "mypy"]
+
+[project.urls]
+Homepage = "https://github.com/Xtley001/brain-alpha-pipeline"
+Repository = "https://github.com/Xtley001/brain-alpha-pipeline"
+Documentation = "https://github.com/Xtley001/brain-alpha-pipeline/tree/main/brain_libraries"
+"Bug Tracker" = "https://github.com/Xtley001/brain-alpha-pipeline/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["brain_store*"]
+
+[tool.setuptools.package-data]
+brain_store = ["py.typed"]

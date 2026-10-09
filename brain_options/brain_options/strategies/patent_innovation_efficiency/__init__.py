@@ -1,0 +1,3 @@
+from brain_options.strategies.patent_innovation_efficiency.strategy import PatentInnovationEfficiencyStrategy
+
+__all__ = ["PatentInnovationEfficiencyStrategy"]
