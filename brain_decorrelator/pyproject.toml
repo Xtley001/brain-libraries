@@ -34,7 +34,7 @@ classifiers = [
     "Topic :: Office/Business :: Financial :: Investment",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
-dependencies = ["brain-core>=0.1.0"]
+dependencies = ["brain-alpha-core>=0.1.0"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "black", "flake8", "mypy"]

@@ -47,7 +47,7 @@ If you are developing a WorldQuant BRAIN alpha generation and research pipeline 
 
 | Library | PyPI Package | Version | Description | Whitepaper |
 |---|---|:---:|---|---|
-| [`brain_core`](brain_core/) | `brain-core` | `0.1.0` | Shared types, config loader, logging, AST deduplication | [Whitepaper](brain_core/docs/whitepaper.md) |
+| [`brain_core`](brain_core/) | `brain-alpha-core` | `0.1.0` | Shared types, config loader, logging, AST deduplication | [Whitepaper](brain_core/docs/whitepaper.md) |
 | [`brain_store`](brain_store/) | `brain-store` | `0.1.0` | PostgreSQL connection pool + flat-file dual-mode persistence | [Schema & Migrations](brain_store/docs/SCHEMA_AND_MIGRATIONS.md) |
 | [`brain_decorrelator`](brain_decorrelator/) | `brain-decorrelator` | `0.1.0` | 6-axis orthogonal decorrelation plugin engine | [Axes Guide](brain_decorrelator/docs/AXES.md) |
 | [`brain_options`](brain_options/) | `brain-options` | `0.1.0` | Options IV surfaces, term structure, and breakeven engine | [Whitepaper](brain_options/docs/whitepaper.md) |

@@ -34,7 +34,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 dependencies = [
-    "brain-core>=0.1.0",
+    "brain-alpha-core>=0.1.0",
     "brain-options>=0.1.0",
     "brain-sentiment>=0.1.0",
     "brain-risk-model>=0.1.0",
