@@ -3,7 +3,7 @@
 ## Setup
 
 ```bash
-git clone https://github.com/Xtley001/brain-alpha-pipeline.git
+git clone https://github.com/Xtley001/brain-libraries.git
 cd brain-alpha-pipeline/brain_libraries/brain_sentiment
 python -m venv venv && source venv/bin/activate
 pip install -e .[dev]

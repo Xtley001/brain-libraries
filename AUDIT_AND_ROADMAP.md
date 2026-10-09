@@ -55,7 +55,7 @@ The suite is architecturally sound. The dependency DAG is correct, the type syst
 | 🟡 HIGH | `config.py` | `load_dotenv()` is called at module import time, affecting test isolation | Move inside `Config.load_from_env()` or accept a `dotenv_path` argument |
 | 🟡 HIGH | `types.py` | `AlphaCandidate.generation_source` has no validation — any string is accepted | Add `__post_init__` validation against a `frozenset` of allowed values |
 | 🟠 MEDIUM | `pyproject.toml` | Missing `[project.scripts]` block | Needed to surface the `brain` CLI after install |
-| 🟠 MEDIUM | `README.md` | Badge CI URL uses `Xtley001` placeholder | Replace with `Xtley001/brain-alpha-pipeline` |
+| 🟠 MEDIUM | `README.md` | Badge CI URL uses `Xtley001` placeholder | Replace with `Xtley001/brain-libraries` |
 | 🟢 LOW | `llm.py` | File exists in `brain-core` but is not imported anywhere in the public `__init__.py` | Either export it or move it to `brain-options` which is the only consumer |
 
 **Missing entirely:**
@@ -199,7 +199,7 @@ These issues appear in multiple libraries or in the monorepo itself.
 | 🔴 BLOCKER | `cli.py` | CLI entry point not declared in any `pyproject.toml` | Add `[project.scripts] brain = "brain_libraries.cli:main"` to `brain-synthesis` or a new `brain-cli` package |
 | 🟡 HIGH | `brain_options`, `brain_sentiment`, `brain_risk_model` | `dedup.py` is copy-pasted in all three | Move to `brain_core.utils.dedup` |
 | 🟡 HIGH | All 7 | No `py.typed` marker — packages are not PEP 561 compliant | Add empty `py.typed` file to each package directory |
-| 🟡 HIGH | All 7 | Badges in README reference `Xtley001/brain-alpha-pipeline` placeholder | Replace with `Xtley001/brain-alpha-pipeline` |
+| 🟡 HIGH | All 7 | Badges in README reference `Xtley001/brain-libraries` placeholder | Replace with `Xtley001/brain-libraries` |
 | 🟡 HIGH | `.github/workflows/` | CI does not publish to PyPI on tag push | Add a `release.yml` workflow that publishes on `v*` tags |
 | 🟠 MEDIUM | All 7 | No `CHANGELOG.md` entries beyond stubs | Write proper `0.1.0` release notes following Keep-a-Changelog format |
 | 🟠 MEDIUM | All 7 | No `docs/whitepaper.md` for the quantitative methodology | Write one per domain library explaining the economic rationale |
@@ -256,10 +256,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Xtley001/brain-alpha-pipeline"
-Repository = "https://github.com/Xtley001/brain-alpha-pipeline"
-Documentation = "https://github.com/Xtley001/brain-alpha-pipeline/tree/main/brain_libraries"
-"Bug Tracker" = "https://github.com/Xtley001/brain-alpha-pipeline/issues"
+Homepage = "https://github.com/Xtley001/brain-libraries"
+Repository = "https://github.com/Xtley001/brain-libraries"
+Documentation = "https://github.com/Xtley001/brain-libraries"
+"Bug Tracker" = "https://github.com/Xtley001/brain-libraries/issues"
 ```
 
 ### 5.2 CLI Entry Point Declaration
@@ -413,8 +413,8 @@ authors:
 title: "Brain Alpha Pipeline"
 version: 0.1.0
 date-released: 2026-10-09
-url: "https://github.com/Xtley001/brain-alpha-pipeline"
-repository-code: "https://github.com/Xtley001/brain-alpha-pipeline"
+url: "https://github.com/Xtley001/brain-libraries"
+repository-code: "https://github.com/Xtley001/brain-libraries"
 keywords:
   - WorldQuant BRAIN
   - alpha generation

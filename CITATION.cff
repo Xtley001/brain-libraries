@@ -6,8 +6,8 @@ authors:
 title: "Brain Alpha Pipeline"
 version: 0.1.0
 date-released: 2026-10-09
-url: "https://github.com/Xtley001/brain-alpha-pipeline"
-repository-code: "https://github.com/Xtley001/brain-alpha-pipeline"
+url: "https://github.com/Xtley001/brain-libraries"
+repository-code: "https://github.com/Xtley001/brain-libraries"
 keywords:
   - WorldQuant BRAIN
   - alpha generation

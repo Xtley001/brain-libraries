@@ -7,7 +7,7 @@ Guidelines for contributing to the `brain-alpha-pipeline` 7-package quantitative
 Clone the repository and install all packages in editable mode:
 
 ```bash
-git clone https://github.com/Xtley001/brain-alpha-pipeline.git
+git clone https://github.com/Xtley001/brain-libraries.git
 cd brain-alpha-pipeline/brain_libraries
 python -m venv venv
 venv\Scripts\activate

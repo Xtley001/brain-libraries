@@ -49,10 +49,10 @@ dev = ["pytest>=8.0", "black", "flake8", "mypy"]
 brain = "brain_synthesis.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/Xtley001/brain-alpha-pipeline"
-Repository = "https://github.com/Xtley001/brain-alpha-pipeline"
-Documentation = "https://github.com/Xtley001/brain-alpha-pipeline/tree/main/brain_libraries"
-"Bug Tracker" = "https://github.com/Xtley001/brain-alpha-pipeline/issues"
+Homepage = "https://github.com/Xtley001/brain-libraries"
+Repository = "https://github.com/Xtley001/brain-libraries"
+Documentation = "https://github.com/Xtley001/brain-libraries"
+"Bug Tracker" = "https://github.com/Xtley001/brain-libraries/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

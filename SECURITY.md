@@ -6,7 +6,7 @@ Vulnerability disclosure process and supported versions for the `brain-alpha-pip
 
 If you identify a security vulnerability, do not open a public issue. Submit a private advisory at:
 
-https://github.com/Xtley001/brain-alpha-pipeline/security/advisories
+https://github.com/Xtley001/brain-libraries/security/advisories
 
 The maintainers acknowledge receipt within 48 hours and provide remediation status updates.
 

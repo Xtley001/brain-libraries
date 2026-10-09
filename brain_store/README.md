@@ -2,7 +2,7 @@
 
 Dual-mode persistence layer (PostgreSQL connection pool + flat-file fallback) and RL state store for Brain Alpha pipelines.
 
-[![CI](https://img.shields.io/github/actions/workflow/status/Xtley001/brain-alpha-pipeline/ci.yml?branch=main)](https://github.com/Xtley001/brain-alpha-pipeline/actions)
+[![CI](https://img.shields.io/github/actions/workflow/status/Xtley001/brain-libraries/ci.yml?branch=main)](https://github.com/Xtley001/brain-libraries/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/brain-store)](https://pypi.org/project/brain-store/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)

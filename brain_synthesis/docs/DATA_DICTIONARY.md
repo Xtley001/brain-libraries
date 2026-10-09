@@ -1,7 +1,7 @@
 # Brain Synthesis — WorldQuant BRAIN Data Dictionary
 
 > Author: [Xtley001](https://github.com/Xtley001)  
-> Repository: [brain-alpha-pipeline](https://github.com/Xtley001/brain-alpha-pipeline)  
+> Repository: [brain-alpha-pipeline](https://github.com/Xtley001/brain-libraries)  
 > Version: 0.1.0
 
 This document specifies every WorldQuant BRAIN platform data field referenced across the `brain_synthesis` library and its 5 Golden Apex Formulations.
