@@ -37,13 +37,13 @@ dependencies = [
     "brain-core>=0.1.0",
     "brain-store>=0.1.0",
     "brain-decorrelator>=0.1.0",
-    "wqb>=0.2.5",
     "requests>=2.31",
     "python-dotenv>=1.0",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "black", "flake8", "mypy"]
+sim = ["wqb>=0.2.5"]
 
 [project.urls]
 Homepage = "https://github.com/Xtley001/brain-libraries"
