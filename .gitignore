@@ -29,6 +29,11 @@ htmlcov/
 *.swp
 *.swo
 
+# Articles & Marketing (Draft Medium publications)
+articles/
+docs/articles/
+
 # OS files
 .DS_Store
 Thumbs.db
+
