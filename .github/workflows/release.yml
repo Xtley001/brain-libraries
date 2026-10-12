@@ -63,10 +63,18 @@ jobs:
             "brain_risk_model"
             "brain_synthesis"
           )
+          FAILED=0
           for pkg in "${PACKAGES[@]}"; do
             echo "::group::Publishing $pkg"
             cd $pkg
-            twine upload --skip-existing dist/*
+            twine upload --skip-existing dist/* || {
+              echo "::warning::Upload for $pkg encountered an error (check PyPI rate limit)"
+              FAILED=1
+            }
             cd ..
             echo "::endgroup::"
           done
+          if [ $FAILED -ne 0 ]; then
+            echo "Notice: Some packages were not uploaded (likely PyPI new project rate limit)."
+            exit 1
+          fi
