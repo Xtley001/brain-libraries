@@ -6,6 +6,7 @@ A suite of 7 pip-installable Python libraries for WorldQuant BRAIN alpha discove
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![PyPI](https://img.shields.io/pypi/v/brain-synthesis)](https://pypi.org/project/brain-synthesis/)
+[![Downloads](https://img.shields.io/pypi/dw/brain-synthesis?color=blue&label=pypi%20downloads)](https://pypistats.org/packages/brain-synthesis)
 
 The `brain_libraries` suite decouples the WorldQuant BRAIN quantitative research workflow into 7 independent, fully tested Python packages. It covers type contracts, dual-mode state storage, strategy-agnostic orthogonal decorrelation, domain engines (Options, Sentiment, Risk Models), and an apex meta-synthesis CLI. For the underlying quantitative methodology, see each library's linked whitepaper.
 
@@ -45,15 +46,15 @@ If you are developing a WorldQuant BRAIN alpha generation and research pipeline 
 
 ## Package Index
 
-| Library | PyPI Package | Version | Description | Whitepaper |
-|---|---|:---:|---|---|
-| [`brain_core`](brain_core/) | `brain-alpha-core` | `0.1.0` | Shared types, config loader, logging, AST deduplication | [Whitepaper](brain_core/docs/whitepaper.md) |
-| [`brain_store`](brain_store/) | `brain-store` | `0.1.0` | PostgreSQL connection pool + flat-file dual-mode persistence | [Schema & Migrations](brain_store/docs/SCHEMA_AND_MIGRATIONS.md) |
-| [`brain_decorrelator`](brain_decorrelator/) | `brain-decorrelator` | `0.1.0` | 6-axis orthogonal decorrelation plugin engine | [Axes Guide](brain_decorrelator/docs/AXES.md) |
-| [`brain_options`](brain_options/) | `brain-options` | `0.1.0` | Options IV surfaces, term structure, and breakeven engine | [Whitepaper](brain_options/docs/whitepaper.md) |
-| [`brain_sentiment`](brain_sentiment/) | `brain-sentiment` | `0.1.0` | PEAD, SUE surprises, and analyst revision diffusion engine | [Whitepaper](brain_sentiment/docs/whitepaper.md) |
-| [`brain_risk_model`](brain_risk_model/) | `brain-risk-model` | `0.1.0` | Systematic factor premia & Betting-Against-Beta (BAB) engine | [Whitepaper](brain_risk_model/docs/whitepaper.md) |
-| [`brain_synthesis`](brain_synthesis/) | `brain-synthesis` | `0.1.0` | Tri-factor apex cross-synthesis meta-alpha engine & CLI | [Data Dictionary](brain_synthesis/docs/DATA_DICTIONARY.md) |
+| Library | PyPI Package | Version | Downloads | Description | Whitepaper |
+|---|---|:---:|:---:|---|---|
+| [`brain_core`](brain_core/) | [`brain-alpha-core`](https://pypi.org/project/brain-alpha-core/) | `0.1.0` | [![Downloads](https://img.shields.io/pypi/dw/brain-alpha-core?label=)](https://pypistats.org/packages/brain-alpha-core) | Shared types, config loader, logging, AST deduplication | [Whitepaper](brain_core/docs/whitepaper.md) |
+| [`brain_store`](brain_store/) | [`brain-store`](https://pypi.org/project/brain-store/) | `0.1.0` | [![Downloads](https://img.shields.io/pypi/dw/brain-store?label=)](https://pypistats.org/packages/brain-store) | PostgreSQL connection pool + flat-file dual-mode persistence | [Schema & Migrations](brain_store/docs/SCHEMA_AND_MIGRATIONS.md) |
+| [`brain_decorrelator`](brain_decorrelator/) | [`brain-decorrelator`](https://pypi.org/project/brain-decorrelator/) | `0.1.1` | [![Downloads](https://img.shields.io/pypi/dw/brain-decorrelator?label=)](https://pypistats.org/packages/brain-decorrelator) | 6-axis orthogonal decorrelation plugin engine | [Axes Guide](brain_decorrelator/docs/AXES.md) |
+| [`brain_options`](brain_options/) | [`brain-options`](https://pypi.org/project/brain-options/) | `0.1.0` | [![Downloads](https://img.shields.io/pypi/dw/brain-options?label=)](https://pypistats.org/packages/brain-options) | Options IV surfaces, term structure, and breakeven engine | [Whitepaper](brain_options/docs/whitepaper.md) |
+| [`brain_sentiment`](brain_sentiment/) | [`brain-sentiment`](https://pypi.org/project/brain-sentiment/) | `0.1.0` | [![Downloads](https://img.shields.io/pypi/dw/brain-sentiment?label=)](https://pypistats.org/packages/brain-sentiment) | PEAD, SUE surprises, and analyst revision diffusion engine | [Whitepaper](brain_sentiment/docs/whitepaper.md) |
+| [`brain_risk_model`](brain_risk_model/) | [`brain-risk-model`](https://pypi.org/project/brain-risk-model/) | `0.1.0` | [![Downloads](https://img.shields.io/pypi/dw/brain-risk-model?label=)](https://pypistats.org/packages/brain-risk-model) | Systematic factor premia & Betting-Against-Beta (BAB) engine | [Whitepaper](brain_risk_model/docs/whitepaper.md) |
+| [`brain_synthesis`](brain_synthesis/) | [`brain-synthesis`](https://pypi.org/project/brain-synthesis/) | `0.1.1` | [![Downloads](https://img.shields.io/pypi/dw/brain-synthesis?label=)](https://pypistats.org/packages/brain-synthesis) | Tri-factor apex cross-synthesis meta-alpha engine & CLI | [Data Dictionary](brain_synthesis/docs/DATA_DICTIONARY.md) |
 
 ## Dependency Architecture
 
