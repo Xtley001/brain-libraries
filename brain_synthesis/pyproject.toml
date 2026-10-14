@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "brain-synthesis"
-version = "0.1.0"
+version = "0.1.1"
 description = "Tri-factor apex synthesis engine fusing options, sentiment, and risk-model signals for WorldQuant BRAIN."
 readme = "README.md"
 requires-python = ">=3.9"
