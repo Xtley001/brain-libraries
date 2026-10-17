@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "brain-decorrelator"
-version = "0.1.1"
-description = "Strategy-agnostic alpha decorrelation engine with plugin-based orthogonalization axes."
+version = "0.2.0"
+description = "Strategy-agnostic alpha decorrelation engine with AST-diff motifs, asymmetric veto control, and plugin-based orthogonalization axes."
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"

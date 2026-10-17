@@ -71,3 +71,30 @@ def test_result_fields_populated():
     assert "Decorrelated(momentum)" in r.archetype_name
     assert "1.70" in r.hypothesis
     assert r.base_alpha_id == "alpha_abc123"
+    assert r.motif_signature != ""
+
+
+def test_veto_pruning_in_engine():
+    from brain_decorrelator.veto_memory import VetoMemory
+    mem = VetoMemory()
+    engine = DecorrelationEngine(veto_memory=mem)
+
+    # First call with collision records the base motif in VetoMemory
+    results = engine.generate_orthogonal_variants(
+        "ts_decay_linear(close, 10)",
+        "momentum",
+        colliding_id="alpha_peer1",
+        universe="TOP3000",
+    )
+    assert len(results) > 0
+
+    # Veto all Velocity Shift variants explicitly
+    mem.record_collision("ts_decay_linear(ts_delta(identifier,literal),literal)", "alpha_peer2", 0.95, universe="TOP3000")
+    results_after_veto = engine.generate_orthogonal_variants(
+        "ts_decay_linear(close, 10)",
+        "momentum",
+        universe="TOP3000",
+    )
+    # The vetoed velocity shift motifs should be pruned
+    assert not any(r.motif_signature == "ts_decay_linear(ts_delta(identifier,literal),literal)" for r in results_after_veto)
+

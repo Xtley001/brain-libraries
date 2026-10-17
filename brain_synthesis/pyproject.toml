@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "brain-synthesis"
-version = "0.1.1"
-description = "Tri-factor apex synthesis engine fusing options, sentiment, and risk-model signals for WorldQuant BRAIN."
+version = "0.2.0"
+description = "Tri-factor apex synthesis engine with Hierarchical Risk Parity (HRP) and dynamic regime adaptation for WorldQuant BRAIN."
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"

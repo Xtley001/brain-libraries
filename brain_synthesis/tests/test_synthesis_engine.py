@@ -1,9 +1,10 @@
 """
-Unit tests — brain_synthesis.engine and combiner
+Unit tests — brain_synthesis.engine and combiner (v0.2.0)
 """
 from brain_core.types import AlphaCandidate
 from brain_synthesis.engine import SynthesisEngine
 from brain_synthesis.combiner import DynamicSynthesizer
+from brain_synthesis.regime_engine.detector import MarketRegime
 
 
 def test_dynamic_synthesizer_single_and_multi_leg():
@@ -16,6 +17,34 @@ def test_dynamic_synthesizer_single_and_multi_leg():
     assert "group_neutralize(" in res.expression
     assert "0.60 * rank(close)" in res.expression
     assert "0.40 * rank(snt1_d1_netearningsrevision)" in res.expression
+
+
+def test_dynamic_synthesizer_hrp():
+    syn = DynamicSynthesizer()
+    leg1 = AlphaCandidate(expression="rank(close)", archetype_name="opt_leg")
+    leg2 = AlphaCandidate(expression="snt1_d1_netearningsrevision", archetype_name="snt_leg")
+
+    # Covariance where leg1 has higher variance (0.04) and leg2 lower (0.01)
+    cov = [
+        [0.04, 0.005],
+        [0.005, 0.01],
+    ]
+    res = syn.synthesize_hrp([leg1, leg2], cov_matrix=cov, name="HRP_Apex")
+    assert res.archetype_name == "HRP_Apex"
+    assert "group_neutralize(" in res.expression
+    # Lower-variance leg2 should get higher weight in HRP
+    assert "rank(snt1_d1_netearningsrevision)" in res.expression
+
+
+def test_dynamic_synthesizer_regime():
+    syn = DynamicSynthesizer()
+    leg1 = AlphaCandidate(expression="rank(close)", archetype_name="opt_leg")
+    leg2 = AlphaCandidate(expression="snt1_d1_netearningsrevision", archetype_name="snt_leg")
+    leg3 = AlphaCandidate(expression="beta_last_60_days_spy", archetype_name="risk_leg")
+
+    res_vol = syn.synthesize_regime([leg1, leg2, leg3], regime=MarketRegime.HIGH_VOLATILITY)
+    assert MarketRegime.HIGH_VOLATILITY.value in res_vol.name
+    assert "group_neutralize(" in res_vol.expression
 
 
 def test_synthesis_engine_decorrelation():
