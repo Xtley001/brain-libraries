@@ -45,11 +45,6 @@ temp/
 /scratch.py
 /scratch_*.py
 
-# Internal audit & roadmap worklogs
-/*AUDIT*.md
-/*ROADMAP*.md
-/AUDIT_AND_ROADMAP.md
-
 # Environment secrets
 .env
 *.env
@@ -60,10 +55,6 @@ temp/
 .idea/
 *.swp
 *.swo
-
-# Articles & Marketing (Draft publications)
-articles/
-docs/articles/
 
 # OS files
 .DS_Store

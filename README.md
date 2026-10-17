@@ -42,7 +42,17 @@ If you are developing a WorldQuant BRAIN alpha generation and research pipeline 
 - **High-Value Alpha Discovery**: Systematic signal mining across options implied volatility, analyst earnings revisions, and systematic risk premia.
 - **Correlation Gate Clearance**: Break platform correlation gates ($|\rho| < 0.70$) without sacrificing Sharpe using 10-axis orthogonal decorrelation, AST-diff motif mining, and asymmetric veto memory.
 - **Tri-Factor Meta-Synthesis**: Cross-domain signal fusion combining options, sentiment, and risk models into 8 golden apex alphas using Hierarchical Risk Parity (HRP) yielding 1,600+ platform points.
-- **Robust Persistence & Dedup**: Dual-mode PostgreSQL connection pooling with zero-dependency offline fallback and AST algebraic deduplication.
+## Quantitative Research Masterclass
+
+A 5-part technical masterclass series demonstrating the econometric theory and empirical mechanics behind the suite:
+
+1. [**Beating the Correlation Gatekeeper ($|\rho| < 0.70$)**](articles/01_beating_the_correlation_gate.md) — 10 orthogonal axes, AST-diff motifs, and asymmetric veto memory.
+2. [**Fixing `LOW_SUB_UNIVERSE_SHARPE` Once and for All**](articles/02_fixing_low_sub_universe_sharpe.md) — Sub-industry vector neutralization eliminating unintended sector bets.
+3. [**Taming the Turnover Trap ($< 12\%$)**](articles/03_taming_the_turnover_trap.md) — PEAD drift half-life matching and SUE surprise normalization.
+4. [**Escaping the Price-Volume Trap**](articles/04_escaping_price_volume_trap.md) — Extracting high-value (ValueScore: 6.0) options surface signals.
+5. [**The 1,500+ Point Blueprint**](articles/05_building_1500_point_meta_alphas.md) — Fusing Options, Sentiment, and Risk Models via Hierarchical Risk Parity (HRP).
+
+*See the [Series Overview & Roadmap](articles/README.md) for complete publication metadata and Medium distribution details.*
 
 ## Package Index
 
